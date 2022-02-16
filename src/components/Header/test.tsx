@@ -1,13 +1,11 @@
 import { render, screen } from '@testing-library/react'
 
-import Button from '.'
+import Header from '.'
 
-describe('<Button />', () => {
-  it('should render a button', () => {
-    render(<Button>Example button</Button>)
+describe('<Header />', () => {
+  it('should render the Header', () => {
+    render(<Header />)
 
-    expect(
-      screen.getByRole('button', { name: /example button/i })
-    ).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Market/i })).toBeInTheDocument()
   })
 })
